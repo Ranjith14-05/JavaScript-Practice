@@ -9,3 +9,16 @@ let isGraduated = false;
 
 console.log(isStudent);
 console.log(isGraduated);
+
+/* Falsy Values In JS
+
+false
+0
+-0
+0n
+""
+null
+undefined
+NaN
+
+*/
