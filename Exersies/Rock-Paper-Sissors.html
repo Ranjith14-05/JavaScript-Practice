@@ -1,76 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Sissor</title>
-</head>
-<body>
-    <h3>Rock Paper Sissor</h3>
-    <button onclick="
-    cM();
-    if(computerMove === 'Rock'){
-        result = 'Tie';
-    }
-    else if (computerMove === 'Paper'){
-        result = 'You Lose';
-    }
-    else if (computerMove === 'Sissor'){
-        result = 'You Won';
-    }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rock Paper Sissor</title>
+    </head>
+    <body>
+        <h3>Rock Paper Sissor</h3>
+        <button onclick="pM('Rock')">Rock</button>
+        <button onclick="pM('Paper')">Paper</button>
+        <button onclick="pM('Sissor')">Sissor</button>
 
-    alert(` Your Move : Rock , Computer Move : ${computerMove} , Result : ${result}`)
-    ">Rock</button>
-
-
-    <button onclick=" 
-    cM();
-    if(computerMove === 'Rock'){
-        result = 'You Won';
-    }
-    else if (computerMove === 'Paper'){
-        result = 'Tie';
-    }
-    else if (computerMove === 'Sissor'){
-        result = 'You Lose';
-    }
-
-    alert(` Your Move : Paper , Computer Move : ${computerMove} , Result : ${result}`)
-    ">Paper</button>
-
-
-    <button onclick=" 
-
-        cM();
-
-        if(computerMove === 'Rock'){
-                result = 'You Lose';
-            }
-        else if (computerMove === 'Paper'){
-                result = 'You Won';
-            }
-        else if (computerMove === 'Sissor'){
-                result = 'Tie';
+        <script>
+            function pM(move) {
+                let result = "";
+                let computerMove = cM();
+                if (move === "Sissor") {
+                    if (computerMove === "Rock") {
+                        result = "You Lose";
+                    } else if (computerMove === "Paper") {
+                        result = "You Won";
+                    } else if (computerMove === "Sissor") {
+                        result = "Tie";
+                    }
+                } else if (move === "Paper") {
+                    if (computerMove === "Rock") {
+                        result = "You Won";
+                    } else if (computerMove === "Paper") {
+                        result = "Tie";
+                    } else if (computerMove === "Sissor") {
+                        result = "You Lose";
+                    }
+                } else if (move === "Rock") {
+                    if (computerMove === "Rock") {
+                        result = "Tie";
+                    } else if (computerMove === "Paper") {
+                        result = "You Lose";
+                    } else if (computerMove === "Sissor") {
+                        result = "You Won";
+                    }
+                }
+                alert(
+                    ` Your Move : ${move} , Computer Move : ${computerMove} , Result : ${result}`,
+                );
             }
 
-    alert(` Your Move : Sissor , Computer Move : ${computerMove} , Result : ${result}`)
-    ">Sissor</button>
-
-    <script>
-        let result ='';
-        let computerMove ='';
-        function cM(){
-            const num = Math.random();
-            if (num >= 0 && num < 1/3) {
-                computerMove = 'Rock';
+            function cM() {
+                const num = Math.random();
+                if (num >= 0 && num < 1 / 3) {
+                    computerMove = "Rock";
+                } else if (num >= 1 / 3 && num < 2 / 3) {
+                    computerMove = "Paper";
+                } else if (num >= 2 / 3 && num < 1) {
+                    computerMove = "Sissor";
+                }
+                return computerMove;
             }
-            else if (num>=1/3 && num <2/3){
-                computerMove = 'Paper';
-            }
-            else if (num >=2/3 && num <1){
-                computerMove = 'Sissor'
-            }
-        }
-    </script>
-</body>
+        </script>
+    </body>
 </html>

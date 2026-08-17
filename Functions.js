@@ -16,3 +16,12 @@ function greet() {
     console.log("Hello");
 }
 greet();
+
+//A parameter is a value that you give to a function so the function can work with that value.
+
+//A function with a parameter is a function that accepts a value as input through a variable called a parameter.
+
+function greet2(name){
+    console.log("Hello "+name);
+}
+greet2("Ranjith");
