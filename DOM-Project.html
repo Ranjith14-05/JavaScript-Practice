@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM Project</title>
+    </head>
+    <body>
+        <p>Youtube subscribe Button</p>
+        <button class="sub-btn" onclick="sub()">Subscribe</button>
+
+        <h3>Amazon Shipping Calculator</h3>
+
+        <p>if Amount Less than 70rs then +10rs for Shipping</p>
+
+        <p>if Amount More Than 70rs then Free Shipping</p>
+
+        <input
+            class="inp"
+            type="text"
+            placeholder="Enter Amount"
+            onkeydown="enter(event)"
+        />
+        <button class="cal-btn" onclick="totalCost()">Calculate</button>
+        <p class="cost"></p>
+
+        <script>
+            function sub() {
+                let subBtn = document.querySelector(".sub-btn");
+
+                if (subBtn.innerText === "Subscribe") {
+                    subBtn.innerHTML = "Subscribed";
+                } else {
+                    subBtn.innerHTML = "Scuscribe";
+                }
+            }
+
+            function totalCost() {
+                const cost = Number(document.querySelector(".inp").value);
+
+                if (cost < 70) {
+                    document.querySelector(".cost").innerHTML =
+                        `The Total Cost is : Rs.${cost + 10}`;
+                } else {
+                    document.querySelector(".cost").innerHTML =
+                        `The Total Cost is : Rs.${cost}`;
+                }
+            }
+
+            function enter(event) {
+                if (event.key === "Enter") {
+                    totalCost();
+                }
+            }
+        </script>
+    </body>
+</html>

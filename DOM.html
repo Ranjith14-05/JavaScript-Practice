@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM</title>
+    </head>
+    <body>
+        <button class="sub-btn" onclick="sub()">Hello</button>
+        <h3>
+            “DOM stands for Document Object Model. It represents an HTML
+            document as a tree of objects, which allows JavaScript to access,
+            modify, add, or delete HTML elements and their content dynamically.”
+        </h3>
+    </body>
+    <script>
+        function sub() {
+            const subBtn = document.querySelector(".sub-btn");
+            subBtn.innerHTML = "Clicked";
+        }
+
+        // Some Strange Behaviour of String in JS
+        let str = String(25);
+        console.log(str);
+        console.log(typeof str);
+        //Type Coercion
+
+        // JavaScript automatically or manually converts a value from one data type to another.
+
+        // When we use -, * ,/ the string convert to Number
+        console.log(str - 5);
+
+        //When we use + the Number itsetlf converts to String
+        console.log(str + 5);
+
+        //window in JavaScript
+
+        //The window object represents the browser window. It is the global object in browser JavaScript and provides access to browser-related features.
+
+        window.console.log("Hello");
+        window.prompt("Enter your name:");
+
+        window.setTimeout(() => {
+            console.log("Hello");
+        }, 2000);
+    </script>
+</html>

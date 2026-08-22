@@ -48,3 +48,52 @@ let person3 = {
 
 console.log(person3.address.city)
 console.log(person3)
+
+//Objects in JavaScript are reference types. When an object is assigned to another variable, both variables hold a reference to the same object in memory.
+
+
+let user = {
+    name: "Ranjith"
+};
+
+let user2 = user;
+
+user.name = 'Sasi';
+
+console.log(user.name);
+console.log(user2.name);
+
+//Destructuring is a JavaScript feature that allows us to extract values from objects or arrays and assign them directly to variables.
+
+const object = {
+    name: "Ranjith",
+    age: 21,
+    course: "AI & DS"
+};
+
+const { name, age } = object;
+
+console.log(name);
+console.log(age);
+
+//shorthand property for objects
+
+let object2 ={
+    //instead of 
+    //name: 'Ranjith'
+    name,
+
+    // Instead Of 
+
+    // method : function function1(){
+    // console.log("Hello");
+    //}
+
+    method (){
+        console.log('Hello');
+    }
+
+}
+
+console.log(object2);
+object2.method();
