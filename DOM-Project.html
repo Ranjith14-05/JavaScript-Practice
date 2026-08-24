@@ -4,6 +4,35 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>DOM Project</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .sub-btn {
+                color: white;
+                padding: 10px 18px;
+                background-color: black;
+                font-weight: bolder;
+                border: none;
+                border-radius: 50px;
+            }
+
+            .subs {
+                background-color: rgb(240, 239, 239);
+                color: black;
+            }
+
+            .inp {
+                padding: 10px;
+            }
+
+            .cal-btn {
+                padding: 12px;
+                border: none;
+                background-color: rgb(15, 161, 15);
+                color: white;
+            }
+        </style>
     </head>
     <body>
         <p>Youtube subscribe Button</p>
@@ -30,8 +59,10 @@
 
                 if (subBtn.innerText === "Subscribe") {
                     subBtn.innerHTML = "Subscribed";
+                    subBtn.classList.add("subs");
                 } else {
-                    subBtn.innerHTML = "Scuscribe";
+                    subBtn.innerHTML = "Subscribe";
+                    subBtn.classList.remove("subs");
                 }
             }
 
