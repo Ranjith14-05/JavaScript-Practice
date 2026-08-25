@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+.move-img {
+    width: 80px;
+}
+.move-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 60px;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+.result {
+    font-weight: bold;
+    font-size: 28px;
+    margin: 50px 5px;
+}
+
+.score {
+    margin-top: 50px;
+}
+
+.rst-btn {
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}

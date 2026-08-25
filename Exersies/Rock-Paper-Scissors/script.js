@@ -1,28 +1,4 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Rock Paper Sissor</title>
-        <style>
-            body {
-                background-color: rgb(25, 25, 25);
-                color: white;
-            }
-        </style>
-    </head>
-    <body>
-        <h3>Rock Paper Sissor</h3>
-        <button onclick="pM('Rock')">Rock</button>
-        <button onclick="pM('Paper')">Paper</button>
-        <button onclick="pM('Sissor')">Sissor</button>
-        <p class="result"></p>
-        <p class="moves"></p>
-        <p class="score"></p>
-        <button onclick="rs()">Reset Score</button>
-
-        <script>
-            let score = JSON.parse(localStorage.getItem("score")) || {
+let score = JSON.parse(localStorage.getItem("score")) || {
                 wins: 0,
                 lose: 0,
                 tie: 0,
@@ -39,28 +15,28 @@
             function pM(move) {
                 let result = "";
                 let computerMove = cM();
-                if (move === "Sissor") {
-                    if (computerMove === "Rock") {
+                if (move === "scissors") {
+                    if (computerMove === "rock") {
                         result = "You Lose";
-                    } else if (computerMove === "Paper") {
+                    } else if (computerMove === "paper") {
                         result = "You Won";
-                    } else if (computerMove === "Sissor") {
+                    } else if (computerMove === "scissors") {
                         result = "Tie";
                     }
-                } else if (move === "Paper") {
-                    if (computerMove === "Rock") {
+                } else if (move === "paper") {
+                    if (computerMove === "rock") {
                         result = "You Won";
-                    } else if (computerMove === "Paper") {
+                    } else if (computerMove === "paper") {
                         result = "Tie";
-                    } else if (computerMove === "Sissor") {
+                    } else if (computerMove === "scissors") {
                         result = "You Lose";
                     }
-                } else if (move === "Rock") {
-                    if (computerMove === "Rock") {
+                } else if (move === "rock") {
+                    if (computerMove === "rock") {
                         result = "Tie";
-                    } else if (computerMove === "Paper") {
+                    } else if (computerMove === "paper") {
                         result = "You Lose";
-                    } else if (computerMove === "Sissor") {
+                    } else if (computerMove === "scissors") {
                         result = "You Won";
                     }
                 }
@@ -85,8 +61,10 @@
                 document.querySelector(".result").innerHTML = result;
 
                 //Code For Display The Moves
-                document.querySelector(".moves").innerHTML =
-                    `Your Move : ${move} , Computer Move : ${computerMove} `;
+                document.querySelector(".moves").innerHTML = `You 
+            <img class="move-img" src="../images/${move}-emoji.png" alt="">
+            computer
+            <img class="move-img" src="../images/${computerMove}-emoji.png" alt="">`;
             }
 
             updateScore();
@@ -99,14 +77,11 @@
             function cM() {
                 const num = Math.random();
                 if (num >= 0 && num < 1 / 3) {
-                    computerMove = "Rock";
+                    computerMove = "rock";
                 } else if (num >= 1 / 3 && num < 2 / 3) {
-                    computerMove = "Paper";
+                    computerMove = "paper";
                 } else if (num >= 2 / 3 && num < 1) {
-                    computerMove = "Sissor";
+                    computerMove = "scissors";
                 }
                 return computerMove;
             }
-        </script>
-    </body>
-</html>
