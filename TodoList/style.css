@@ -1,0 +1,26 @@
+input{
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.add{
+    padding: 12px 16px;
+    border: none;
+    background-color: rgb(0, 128, 0);
+    color: white;
+    font-weight: bolder;
+}
+.del{
+    padding: 12px 16px;
+    border: none;
+    background-color: rgb(126, 21, 21);
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 12px;
+}
+
+.out{
+    display:grid;
+    grid-template-columns: 200px 150px 100px;
+}
