@@ -42,3 +42,21 @@ let student = {
 for (let key in student) {
     console.log(key, student[key]);
 }
+
+// Beaak Statement 
+
+//The break statement immediately exits the loop. Once break is executed, the loop stops, and the program continues with the code after the loop.
+
+for ( let i = 1 ; i<=10 ; i++){
+    console.log(i);
+    if (i==8)
+        break;
+}
+
+// Continue Statement 
+
+for(let i = 1 ; i<=10 ; i++){
+    if (i==2)
+        continue;
+    console.log(i)
+}
