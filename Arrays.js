@@ -32,3 +32,28 @@ console.log(fruits.length);  // Returns the length of the Array
 
 fruits.pop();  // remove from end
 console.log(fruits);
+
+// Array Destructuring in js 
+//It means taking values from an array and storing them directly into variables.
+
+
+//without Destructiring
+const numbers = [10, 20, 30];
+
+let a = numbers[0];
+let b = numbers[1];
+let c = numbers[2];
+
+console.log(a); // 10
+console.log(b); // 20
+console.log(c); // 30
+
+// with destructuring 
+
+const numbers2 = [10, 20, 30];
+
+let [x,y,z] = numbers2;
+
+console.log(a); // 10
+console.log(b); // 20
+console.log(c); // 30
