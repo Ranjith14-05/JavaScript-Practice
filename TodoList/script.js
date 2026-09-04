@@ -1,6 +1,19 @@
 let todoList =[];
 
+const btn = document.querySelector('.add');
 
+btn.addEventListener('click',()=> {
+    let task = document.querySelector('.inp').value;
+    let date = document.querySelector('.date-inp').value;
+    todoList.push({
+        task,
+        date
+    });
+    document.querySelector('.inp').value = '';
+    renderTask();
+})
+
+/*
 function addtask(){
     let task = document.querySelector('.inp').value;
     let date = document.querySelector('.date-inp').value;
@@ -11,6 +24,8 @@ function addtask(){
     document.querySelector('.inp').value = '';
     renderTask();
 }
+*/
+
 
 function renderTask(){
     document.querySelector('.out').innerHTML = '';

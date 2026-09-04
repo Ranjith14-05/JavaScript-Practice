@@ -57,3 +57,17 @@ let [x,y,z] = numbers2;
 console.log(a); // 10
 console.log(b); // 20
 console.log(c); // 30
+
+
+// Accessing array using forEach loop
+
+fruits.forEach((value) => {
+    console.log(value);
+}
+);
+
+//“map() is a JavaScript array method used to transform each element and return a new array. It does not modify the original array.”
+let arr = [1,-2,3,4]
+console.log(arr.filter(value => value>0));
+let res = arr.map(value => value*2)
+console.log(res);

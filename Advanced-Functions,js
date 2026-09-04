@@ -1,0 +1,24 @@
+// Traditional function
+function add(a, b) {
+    return a + b;
+}
+
+// Arrow function
+const add = (a, b) => a + b;
+
+console.log(add(5, 3)); // 8
+
+// call back functios
+//A function passed as an argument to another function.
+
+function greet(name, callback) {
+    console.log("Hello " + name);
+    callback();
+}
+
+function sayBye() {
+    console.log("Goodbye!");
+}
+
+greet("John", sayBye);
+
